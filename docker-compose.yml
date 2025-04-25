@@ -4,27 +4,11 @@ services:
   client:
     build:
       context: ./client
-      dockerfile: Dockerfile
-    container_name: client
-    depends_on:
-      - server
+    ports:
+      - "4173:4173"
 
   server:
     build:
       context: ./server
     ports:
       - "3000:3000"
-
-  nginx:
-    image: nginx:latest
-    ports:
-      - "80:80"
-    volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-      - ./client/dist:/usr/share/nginx/html
-    depends_on:
-      - client
-      - server
-
-volumes:
-  client-build:
