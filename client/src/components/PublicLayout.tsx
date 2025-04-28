@@ -13,7 +13,7 @@ const PublicLayout = () => {
 
     useEffect(() => {
         if (verified === true) {
-            navigate('/dashboard');
+            navigate('/crm/dashboard');
         }
     }, [verified])
 

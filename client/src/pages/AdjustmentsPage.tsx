@@ -142,7 +142,7 @@ const AdjustmentsPage = () => {
                     <h1 className="text-2xl font-bold">Campaign Adjustments</h1>
                     <div className="flex space-x-4">
                         <button
-                            onClick={() => navigate("/dashboard")}
+                            onClick={() => navigate("/crm/dashboard")}
                             className="px-4 py-2 bg-gray-200 text-gray-700 rounded-md text-sm"
                         >
                             Back to Dashboard

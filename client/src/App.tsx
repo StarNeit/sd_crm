@@ -10,16 +10,16 @@ function App() {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<PrivateLayout />}>
+                <Route path="/crm" element={<PrivateLayout />}>
                     <Route path="dashboard" element={<DashboardPage />} />
                     <Route path="adjustments" element={<AdjustmentsPage />} />
                     <Route path="*" element={<NotFound />} />
                 </Route>
-                <Route path="/login" element={<PublicLayout />}>
+                <Route path="/crm/login" element={<PublicLayout />}>
                     <Route path="" element={<LoginPage />} />
                 </Route>
 
-                <Route path="*" element={<Navigate to="/login" replace />} />
+                <Route path="*" element={<Navigate to="/crm/login" replace />} />
             </Routes>
         </Router>
     )

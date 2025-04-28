@@ -21,7 +21,8 @@ services:
       - "80:80"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-      - ./client/dist:/usr/share/nginx/html
+      - ./client/dist:/usr/share/nginx/html/crm
+      - ./webgl_eft:/usr/share/nginx/html/webgl_eft
     depends_on:
       - client
       - server

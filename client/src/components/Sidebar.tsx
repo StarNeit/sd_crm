@@ -17,16 +17,16 @@ import clsx from "clsx"
 
 const navItems = [
     { name: "Home", icon: Home, path: "/" },
-    { name: "Ad Overview", icon: BarChart2, path: "/dashboard" },
-    { name: "Ad Groups", icon: Users, path: "/ad-groups" },
-    { name: "KW Brand-Tail", icon: Tag, path: "/kw-brand" },
-    { name: "KW Match Type", icon: Package, path: "/kw-match" },
-    { name: "KW Quality Score", icon: Award, path: "/kw-quality" },
-    { name: "Ad Structure", icon: Users, path: "/ad-structure" },
-    { name: "Impr. Share", icon: Share2, path: "/impr-share" },
-    { name: "Conversions", icon: RefreshCw, path: "/conversions" },
-    { name: "GEO Location", icon: MapPin, path: "/geo-location" },
-    { name: "Hourly/Monthly", icon: Clock, path: "/hourly-monthly" },
+    { name: "Ad Overview", icon: BarChart2, path: "/crm/dashboard" },
+    { name: "Ad Groups", icon: Users, path: "/crm/ad-groups" },
+    { name: "KW Brand-Tail", icon: Tag, path: "/crm/kw-brand" },
+    { name: "KW Match Type", icon: Package, path: "/crm/kw-match" },
+    { name: "KW Quality Score", icon: Award, path: "/crm/kw-quality" },
+    { name: "Ad Structure", icon: Users, path: "/crm/ad-structure" },
+    { name: "Impr. Share", icon: Share2, path: "/crm/impr-share" },
+    { name: "Conversions", icon: RefreshCw, path: "/crm/conversions" },
+    { name: "GEO Location", icon: MapPin, path: "/crm/geo-location" },
+    { name: "Hourly/Monthly", icon: Clock, path: "/crm/hourly-monthly" },
 ]
 
 const Sidebar = () => {
