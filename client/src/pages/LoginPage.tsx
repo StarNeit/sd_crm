@@ -19,7 +19,7 @@ const LoginPage = () => {
 
             if (response.token) {
                 window.localStorage.setItem(import.meta.env.VITE_AUTH_TOKEN_NAME, response.token);
-                navigate("/crm/dashboard");
+                navigate("/dashboard");
             }
         } catch (e) {
             setError("Invalid credentials")
