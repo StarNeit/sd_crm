@@ -17,15 +17,31 @@ services:
 
   nginx:
     image: nginx:latest
-    ports:
-      - "80:80"
+    container_name: nginx
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./client/dist:/usr/share/nginx/html/crm
       - ./webgl_eft:/usr/share/nginx/html/webgl_eft
+      - ./certbot/www:/var/www/certbot
+      - ./certbot/conf:/etc/letsencrypt
+    ports:
+      - "80:80"
+      - "443:443"
     depends_on:
       - client
       - server
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - ./certbot/www:/var/www/certbot
+      - ./certbot/conf:/etc/letsencrypt
+    entrypoint: "/bin/sh -c"
+    command: >
+      "certbot certonly --webroot --webroot-path=/var/www/certbot
+      --email your@email.com --agree-tos --no-eff-email
+      -d edge1.tech"
 
 volumes:
   client-build:
